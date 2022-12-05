@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+.home {
+  width: 100%;
+  height: 100vh;
+}
+.home__gradient {
+  width: 100%;
+  height: 75vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  background-image: linear-gradient(0deg, rgba(156, 156, 156, 0.39), transparent);
+}
+.home__description {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+.home__description h1 {
+  font-size: var(--big-font-size);
+  font-weight: 400;
+}
+.home__description h1 span {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.home__description form button {
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  font-size: var(--medium-font-size);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.home__img img {
+  width: 70%;
+  position: absolute;
+  right: 0%;
+  bottom: -10px;
+  z-index: var(--z-back);
+}
+.home__partners {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.home__partners-img {
+  width: 200px;
+  height: auto;
+}/*# sourceMappingURL=home.css.map */

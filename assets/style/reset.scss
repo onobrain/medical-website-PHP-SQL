@@ -1,0 +1,59 @@
+
+// >> SYSTEM VARIABLES
+$header-height:3rem;
+// >> MODIFIERS
+.--outline-blue{
+    background: transparent;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    transition: .3s ease;
+    cursor: pointer;
+    & a{
+        color: var(--primary-color);
+    }
+    &:hover{
+        background: var(--primary-color);
+        color: #fff;
+        border: 2px solid transparent;
+    }
+}
+
+// >> CSS VARIABLES 
+:root{
+    // color : 
+    --primary-color:rgba(0, 156, 205, 1);
+    --secondary-color:#0282a8;
+    --text-color:rgba(156, 156, 156, 1);
+    // font-size : 
+    --big-font-size:2.25rem; 
+    --medium-font-size:1.25rem;
+    --normal-font-size:1rem;
+    --small-font-size:.725rem;
+    // z-index : 
+    --z-back : -1;
+    --z-normal:1;
+    --z-tooltip:10;
+    // margins
+    --m-1:1rem;
+    --m-2:2rem;
+    --m-3:3rem;
+    --m-5:5rem;
+    --m-7:7rem;
+}
+    // >> BASE : 
+*,::before,::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
