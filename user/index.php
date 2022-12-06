@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/style/home.css">
-    <link rel="stylesheet" href="../assets/style/reset.css">
+    <link rel="stylesheet" href="../assets/style/nav.css">
     <title>Zaid-Dotcom</title>
 </head>
 <body>

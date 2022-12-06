@@ -17,7 +17,7 @@
             <img src="assets/img/doctor2.webp" alt="">
         </div>
         <div class="main__right">
-            <h2>connexion</h2>
+            <h2>S'inscrire</h2>
             <form method="POST" class="form">
                 
                 <div class="form__div">

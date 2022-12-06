@@ -100,6 +100,12 @@
   border: none;
   margin-bottom: var(--m-1);
   color: #fff;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+.main__right .logIn:hover {
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.33);
+  transform: translateY(-4px);
 }
 .main__right .retour {
   border: 2px solid var(--primary-color);

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Open+Sans&family=Poppins:wght@400;600&display=swap");
 .--outline-blue {
   background: transparent;
   outline: none;
@@ -19,6 +20,8 @@
   --primary-color:rgba(0, 156, 205, 1);
   --secondary-color:#0282a8;
   --text-color:rgba(156, 156, 156, 1);
+  --gray-color:rgba(97, 97, 97, 1);
+  --bigger-font-size:3rem;
   --big-font-size:2.25rem;
   --medium-font-size:1.25rem;
   --normal-font-size:1rem;
@@ -50,4 +53,16 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    margin: auto;
+  }
 }/*# sourceMappingURL=reset.css.map */
