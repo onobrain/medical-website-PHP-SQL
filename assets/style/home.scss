@@ -25,14 +25,14 @@
                 color:var(--primary-color);
             }
         }
-        & form button{
+        & button{
             margin-top: 1rem;
             padding: 1rem 3rem;
             background: var(--primary-color);
             border:none;
-            color: white;
             font-size: var(--medium-font-size);
             border-radius: 6px;
+            color: #fff;
             cursor: pointer;
         }
     }

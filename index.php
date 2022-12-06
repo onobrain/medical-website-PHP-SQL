@@ -29,7 +29,7 @@
 
             <div class="home__description">
                 <h1>La meilleur online<br> medical survice dans <span><br>ouled teïma</span></h1>
-                <form method="Post"><button>Prenez rendez-vous</button></form>
+                <a href="register.php"><button>Prenez rendez-vous</button></a>
             </div> 
             
             <div class="home__img">
