@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -7,10 +8,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/style/register.css">
     <link rel="stylesheet" href="assets/style/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <!-- JAVASCRIPT -->
     <script src="assets/javascript/logic.js" defer></script>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" defer></script>
+    
     <title>Document</title>
  </head>
  <body>
@@ -46,11 +49,11 @@
                 <div class="form__div active">
                     <div class="form__div-input">
                         <label for="" class="form__label">Date de naissance</label>
-                        <input type="date" name="" id="age" class="form__input" required>
+                        <input type="date" name="age" id="" class="form__input" required>
                     </div>
-                </div>
+                </div> 
 
-                <button class="signIn" name="submit">Enregistrement</button>
+                <button class="signIn" name="submit" type="submit">Enregistrement</button>
                 <a href="index.php" class="retour">Retour</a>
             </form>
         </div>
@@ -61,18 +64,41 @@
 
  <?php
     if(isset($_POST['submit'])){
+
+        #import database
         require_once "database.php";
-        $adduser = $database->prepare("INSERT INTO users(username,userpassword,useremail,userage,ACTIVATECODE,ROLE) VALUES(:NAME,:PASSWORD,:EMAIL,:AGE,0,USER)");
-        $adduser->bindParam("NAME",$_POST['name']);
-        $adduser->bindParam("PASSWORD",$_POST['password']);
-        $adduser->bindParam("EMAIL",$_POST['email']);
-        $adduser->bindParam("AGE",$_POST['age']);
-        if($adduser->execute()){
+
+        #check if the email alreay used
+        $check = $database->prepare("SELECT * FROM users WHERE useremail = :EMAIL");
+        $check->bindParam("EMAIL",$_POST["email"]);
+        $check->execute();
+
+        #if email already used
+        if($check->rowCount()>0){
             echo '
-            <div class="alert alert-primary" role="alert">
-                Vous avez été enregistré avec succès, 
+            <div class="alert alert-warning" role="alert" style="position:absolute;left:0;top:0;width:100%">
+                cette Adress-email été utilisé!
             </div>
             ';
+        }else{
+            $name  = $_POST['name'];
+            $password = $_POST['password'];
+            $email = $_POST['email'];
+            $age = $_POST['age'];
+            #add user
+            $adduser = $database->prepare("INSERT INTO users(username,userpassword,useremail,userage,ISACTIVE,ROLE) VALUES(:NAME,:PASSWORD,:EMAIL,:AGE,'0','USER')");
+            $adduser->bindParam("NAME",$name);
+            $adduser->bindParam("PASSWORD",$password);
+            $adduser->bindParam("EMAIL",$email);
+            $adduser->bindParam("AGE",$age);
+            if($adduser->execute()){
+                echo '
+                    <div class="alert alert-primary" role="alert" style="position:absolute;left:0;top:0;width:100%">
+                        Vous avez été enregistré avec succès, 
+                    </div>
+                ';
+                header("refresh:.3;url=http://localhost/server/user/index.php");
+            }    
         }
     }
  ?>
