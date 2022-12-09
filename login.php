@@ -46,7 +46,7 @@
                     </div>
                 </div>
 
-                <a href="#" class="form__forgot">oublié le mot de passe?</a>
+                <a href="forgot1.php" class="form__forgot">oublié le mot de passe?</a>
                 <button class="logIn" name="submit" type="submit">Connexion</button>
                 <a href="index.php" class="retour">Retour</a>
             </form>
