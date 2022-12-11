@@ -1,13 +1,7 @@
-body{
- background:var(--primary-color);
     main{
+        background:var(--primary-color);
         position:relative;
         width:100%;
-        max-width: 1400px;
-        @media screen and (min-width:1400px){
-            margin-left: auto;
-            margin-right:auto;
-        }
         height:100vh;
         display:grid;
         place-content: center;
@@ -81,4 +75,4 @@ body{
         }
     }
     
-}
+

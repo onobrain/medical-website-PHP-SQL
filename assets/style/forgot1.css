@@ -1,21 +1,12 @@
-body {
+main {
   background: var(--primary-color);
-}
-body main {
   position: relative;
   width: 100%;
-  max-width: 1400px;
   height: 100vh;
   display: grid;
   place-content: center;
 }
-@media screen and (min-width: 1400px) {
-  body main {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-body main .retour {
+main .retour {
   position: absolute;
   left: 1rem;
   top: 1rem;
@@ -27,28 +18,28 @@ body main .retour {
   transition: 0.3s;
   cursor: pointer;
 }
-body main .retour:hover {
+main .retour:hover {
   background: #fff;
   color: var(--primary-color);
 }
-body main .box {
+main .box {
   width: 80vmin;
   background: #fff;
   border-radius: 6px;
   padding: 1rem 4rem;
   text-align: center;
 }
-body main .box__title {
+main .box__title {
   margin-bottom: var(--m-1);
   font-size: var(--big-font-size);
   color: var(--primary-color);
 }
-body main .box__text {
+main .box__text {
   color: var(--text-color);
   font-size: var(--normal-font-size);
   margin-bottom: var(--m-2);
 }
-body main .box__email {
+main .box__email {
   display: block;
   width: 100%;
   outline: none;
@@ -62,19 +53,19 @@ body main .box__email {
   text-align: center;
   color: var(--text-color);
 }
-body main .box__email:focus {
+main .box__email:focus {
   border: 1px solid var(--primary-color);
 }
-body main .box__email:focus::-moz-placeholder {
+main .box__email:focus::-moz-placeholder {
   opacity: 0;
 }
-body main .box__email:focus:-ms-input-placeholder {
+main .box__email:focus:-ms-input-placeholder {
   opacity: 0;
 }
-body main .box__email:focus::placeholder {
+main .box__email:focus::placeholder {
   opacity: 0;
 }
-body main .box__button {
+main .box__button {
   width: 100%;
   font-size: var(--normal-font-size);
   padding: 1rem;
@@ -85,7 +76,7 @@ body main .box__button {
   transition: ease 0.3s;
   cursor: pointer;
 }
-body main .box__button:hover {
+main .box__button:hover {
   box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.33);
   transform: translateY(-4px);
 }/*# sourceMappingURL=forgot1.css.map */
